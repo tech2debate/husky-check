@@ -1,0 +1,9 @@
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+
+echo "Running pre-commit validations..."
+
+# Validate code uniqueness
+node scripts/validate-codes.js
+
+echo "All validations passed!"
